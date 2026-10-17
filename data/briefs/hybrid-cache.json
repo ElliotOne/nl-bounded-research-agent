@@ -1,0 +1,9 @@
+{
+  "question": "Can HybridCache replace Redis in a multi-instance .NET application?",
+  "questions": [
+    { "id": "Q1", "text": "Which responsibilities belong to HybridCache and which belong to a distributed cache backend?" },
+    { "id": "Q2", "text": "What are the documented invalidation limitations across application instances?" }
+  ],
+  "allowedHosts": ["learn.microsoft.com", "github.com", "raw.githubusercontent.com"],
+  "seedUrls": []
+}

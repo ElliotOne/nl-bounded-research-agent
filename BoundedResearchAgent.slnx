@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BoundedResearchAgent/BoundedResearchAgent.csproj" />
+  <Project Path="BoundedResearchAgent.Tests/BoundedResearchAgent.Tests.csproj" />
+</Solution>

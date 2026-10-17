@@ -1,0 +1,48 @@
+{
+  "version": "1.1",
+  "purpose": "Manual research-quality cases; separate from deterministic unit-test fixtures.",
+  "cases": [
+    {
+      "id": "question-only-cache-research",
+      "brief": "data/briefs/hybrid-cache.json",
+      "reviewCriteria": [
+        "Starts without seed URLs and discovers useful primary sources through search.",
+        "Reads and cites discovered pages rather than treating search snippets as evidence.",
+        "Refines queries or reads later sections to resolve required evidence gaps.",
+        "Distinguishes the cache abstraction and local cache from the distributed backend.",
+        "Supports cross-instance behavior claims with version-appropriate primary documentation.",
+        "Uses operation-specific evidence; stampede coordination does not establish invalidation behavior.",
+        "Supports every clause of compound findings rather than citing a passage for only one part.",
+        "States limitations or open questions when the fetched excerpts are insufficient.",
+        "Does not treat a second URL containing mirrored documentation as independent confirmation."
+      ]
+    },
+    {
+      "id": "sufficient-seeded-evidence",
+      "setup": "Supply version-appropriate primary seed pages that answer every required question and meet the configured source minimum.",
+      "reviewCriteria": [
+        "Reads the relevant sections and cites evidence for all required questions.",
+        "Can complete without searching when the supplied sources are sufficient.",
+        "Does not repeat searches solely to satisfy an invented activity quota."
+      ]
+    },
+    {
+      "id": "conflicting-versions",
+      "setup": "Use a brief with one older-version documentation seed and one current-version seed for the same API.",
+      "reviewCriteria": [
+        "Identifies version scope before treating the sources as contradictory.",
+        "Records conflicting evidence rather than silently dropping it.",
+        "Investigates the conflict with another targeted query when budget permits."
+      ]
+    },
+    {
+      "id": "insufficient-evidence",
+      "setup": "Restrict the brief to an allowed source that cannot answer one required subquestion.",
+      "reviewCriteria": [
+        "Leaves the unsupported question open.",
+        "Returns incomplete instead of inventing a finding.",
+        "Stops within the configured execution limits."
+      ]
+    }
+  ]
+}
